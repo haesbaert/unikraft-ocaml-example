@@ -2,16 +2,17 @@
 specification: '0.5'
 name: helloocaml
 unikraft:
-  version: 0.7.0
+  version: stable
+  kconfig:
+    - CONFIG_LIBUKSCHED=y
+    - CONFIG_LIBUKSCHEDCOOP=y
+    - CONFIG_LIBUKDEBUG_PRINTK_INFO=y
 targets:
   - architecture: x86_64
     platform: kvm
 libraries:
   ocaml:
-    version: 2beaa16
-  gcc:
-    version: '0.6'
-  pthread-embedded:
-    version: '0.6'
-  newlib:
-    version: '0.6'
+    version: staging
+    source: /d/lucas-unikraft-ocaml
+  musl:
+    version: stable
