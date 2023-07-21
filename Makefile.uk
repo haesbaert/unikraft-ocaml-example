@@ -3,7 +3,6 @@ $(eval $(call addlib,apphelloocaml))
 
 LIBS := $(UK_LIBS)/musl:$(UK_LIBS)/ocaml
 
-APPHELLOOCAML_SRCS-y += $(APPHELLOOCAML_BASE)/main.c
 APPHELLOOCAML_OBJS-y += $(APPHELLOOCAML_BASE)/_build/default/src/program.exe.o
 
 .PHONY: 
